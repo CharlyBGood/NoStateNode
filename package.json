@@ -1,0 +1,25 @@
+{
+  "name": "lunaticoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon src/index.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "charlybgood",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/node": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "nodemon": "^2.0.15"
+  }
+}
