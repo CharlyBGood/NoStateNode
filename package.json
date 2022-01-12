@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon src/index.js --exec babel-node"
+    "dev": "npx nodemon src/index.js --exec babel-node",
+    "build": "babel src -d dist && ncp src/views dist/views && ncp src/public dist/public"
   },
   "keywords": [],
   "author": "charlybgood",
@@ -20,7 +21,9 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/node": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.8",
     "@babel/preset-env": "^7.16.5",
+    "ncp": "^2.0.0",
     "nodemon": "^2.0.15"
   }
 }
