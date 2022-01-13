@@ -16,14 +16,22 @@
           </div>
 
           <div class="mb-3">
-            <textarea
+            <input
+              name="description"
+              type="url"
+              placeholder="share link"
+              value="{{task.description}}"
+              id="description"
+              class="form-control rounded-0 bg-dark text-white"
+            />
+            {{!-- <textarea
               name="description"
               rows="3"
               placeholder="Add a description"
               class="form-control rounded-0 bg-dark text-white"
             >
               {{task.description}}
-            </textarea>
+            </textarea> --}}
           </div>
 
           <button class="btn btn-dark">Update</button>
