@@ -1,23 +1,22 @@
-<div class="card card-body p-4 rounded-0 bg-dark text-white">
-  <form action="/tasks/add" method="POST">
-    <div>
-      <label for="title">Write a title</label>
+
+  <form class="form-container" action="/tasks/add" method="POST">
+    
+      <label for="title">Descriptive title</label>
       <input
         type="text"
         name="title"
-        placeholder="title"
+        placeholder="Title"
         id="title"
-        class="form-control rounded-0 bg-dark text-white"
+        class="form-title"
       />
-    </div>
-    <div>
-      <label for="description">Share content</label>
+    
+      <label for="description">Link URL</label>
       <input
         name="description"
         type="url"
-        placeholder="share link"
+        placeholder="URL"
         id="description"
-        class="form-control rounded-0 bg-dark text-white"
+        class="form-content"
       />
       {{! <textarea
         name="description"
@@ -27,9 +26,8 @@
         rows="1"
         class="form-control rounded-0 bg-dark text-white"
       ></textarea> }}
-    </div>
-    <button class="btn btn-dark btn-sm mt-2"><i
+    
+    <button class="form-btn"><i
         class="fas fa-share-square"
-      ></i>Add link</button>
+      ></i>Add</button>
   </form>
-</div>
