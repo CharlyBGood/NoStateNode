@@ -6,6 +6,8 @@ import morgan from "morgan";
 
 const app = express();
 
+const favicon = require('serve-favicon')
+
 app.set("views", path.join(__dirname, "views"));
 
 const exphbs = create({
@@ -28,5 +30,8 @@ app.use(indexRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(favicon(path.join(__dirname, "public", "icons", "favicon.ico")));
+
 
 export default app;
