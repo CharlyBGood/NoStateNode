@@ -29,18 +29,18 @@ export const deleteTask = async (req, res) => {
   const { id } = req.params;
 
   await Task.findByIdAndDelete(id);
-
+  
   res.redirect("/");
 };
 
-export const taskToggleDone = async (req, res) => {
-  const { id } = req.params;
+// export const taskToggleDone = async (req, res) => {
+//   const { id } = req.params;
 
-  const task = await Task.findById(id);
+//   const task = await Task.findById(id);
 
-  task.done = !task.done;
+//   task.done = !task.done;
 
-  await task.save();
+//   await task.save();
 
-  res.redirect("/");
-};
+//   res.redirect("/");
+// };

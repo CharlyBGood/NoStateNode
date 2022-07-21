@@ -13,11 +13,12 @@ const taskSchema = new Schema(
       type: String,
       required: true,
     },
-    done: {
-      type: Boolean,
-      default: false,
-    },
-  },
+    // done: {
+    //   type: Boolean,
+    //   default: false,
+    // },
+  }
+  ,
   {
     timestamps: true,
     versionKey: false,

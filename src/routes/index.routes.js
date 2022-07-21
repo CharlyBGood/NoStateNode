@@ -16,7 +16,7 @@ router.get("/", renderTasks);
 
 router.post("/tasks/add", createTask);
 
-router.get("/tasks/:id/toggleDone", taskToggleDone);
+// router.get("/tasks/:id/toggleDone", taskToggleDone);
 
 router.get("/tasks/:id/edit", renderTaskEdit);
 

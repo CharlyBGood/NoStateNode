@@ -33,5 +33,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(favicon(path.join(__dirname, "public", "icons", "favicon.ico")));
 
+app.use(express.static(path.join(__dirname, "js", "main.js")));
 
 export default app;
