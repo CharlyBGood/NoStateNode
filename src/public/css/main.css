@@ -6,8 +6,10 @@
 }
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
+
 
 body {
     font-family: 'Source Code Pro', monospace;
@@ -19,9 +21,14 @@ body {
 }
 
 .nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 100%;
     background-color: var(--soft-black);
 }
@@ -36,9 +43,14 @@ body {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 80%;
     margin: .5em auto 3em;
     font-size: .9em;
@@ -47,12 +59,19 @@ body {
 
 .main-container {
     margin: .5em 0;
-    flex: .6;
+    -webkit-box-flex: .6;
+        -ms-flex: .6;
+            flex: .6;
 }
 
 .form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     padding: 1em;
     background-color: var(--soft-black);
@@ -69,6 +88,8 @@ body {
 }
 
 .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1em;
 }
@@ -119,7 +140,6 @@ button > * {
     color: var(--orange-wheat);
     text-decoration: none;
     line-break: auto;
-    
 }
 
 .table-header th {
@@ -134,7 +154,9 @@ button > * {
     background-color: var(--soft-black);
     margin: .5em 0;
     border-radius: .6em;
-    flex: .8;
+    -webkit-box-flex: .8;
+        -ms-flex: .8;
+            flex: .8;
 }
 
 footer {
@@ -160,14 +182,25 @@ footer p {
 
 @media screen and ( max-width: 750px ) {
     .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .main-container, .table-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         width: 100%;
     } 
 }
