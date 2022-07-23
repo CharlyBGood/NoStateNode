@@ -4,6 +4,9 @@ for (let del of deleteBtn) {
     del.addEventListener("click", doSomething)
 }
 
-function doSomething() {
-    alert("hola putin");
+function doSomething(e) {
+    e.preventDefault();
+    confirm("estas seguro?")
+    
 }
+
