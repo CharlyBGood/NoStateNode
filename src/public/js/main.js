@@ -5,8 +5,10 @@ for (let del of deleteBtn) {
 }
 
 function doSomething(e) {
-    e.preventDefault();
-    confirm("estas seguro?")
+    let opt = confirm("Are you sure you want to delete entry?");
+    if (opt == false) {
+        e.preventDefault();
+    } 
     
 }
 
