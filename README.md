@@ -4,5 +4,5 @@ MONGO_URI
 PORT
 
 
-## Starts with 
+## Deploy with 
 npm run dev
