@@ -3,13 +3,13 @@ import Task from "../models/Task";
 export const renderTasks = async (req, res) => {
   const task = await Task.find().lean();
 
-  res.render("index", { tasks: task });
+  res.render("tableComplete", { tasks: task });
 };
 
 export const createTask = async (req, res) => {
   const task = Task(req.body);
   await task.save();
-  res.redirect("/");
+  res.redirect("/tableComplete");
 };
 
 export const renderTaskEdit = async (req, res) => {
@@ -27,14 +27,11 @@ export const editTask = async (req, res) => {
 
 export const deleteTask = async (req, res, e) => {
   const { id } = req.params;
-  
+
   await Task.findByIdAndDelete(id);
 
-  res.redirect("/");
-
+  res.redirect("/tableComplete");
 };
-
-
 
 // export const taskToggleDone = async (req, res) => {
 //   const { id } = req.params;

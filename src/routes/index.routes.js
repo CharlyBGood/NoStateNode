@@ -6,13 +6,17 @@ import {
   renderTaskEdit,
   editTask,
   deleteTask,
-  taskToggleDone,
+  taskToggleDone
 } from "../controllers/tasks.controller";
 
 //  Router
 const router = Router();
 
-router.get("/", renderTasks);
+router.get("/", (req, res) => {
+  res.render("welcome")
+})
+
+router.get("/tableComplete", renderTasks);
 
 router.post("/tasks/add", createTask);
 

@@ -1,6 +1,7 @@
 import express from "express";
 import { create } from "express-handlebars";
 import indexRoutes from "./routes/index.routes";
+import usersRoutes from "./routes/users.routes";
 import path from "path";
 import morgan from "morgan";
 
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use(indexRoutes);
+app.use(usersRoutes);
 
 // static files
 app.use(express.static(path.join(__dirname, "public")));
