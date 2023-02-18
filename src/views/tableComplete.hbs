@@ -1,12 +1,12 @@
 <div class="content_container">
     <div class="main-container">
-        
+        {{#if users}}
+    <h2>Bienvenido {{users.username}}</h2>
+        {{/if}}
             {{> tasks/taskForm }}
         
     </div>
     <div class="table-container">
-
             {{> tasks/taskTable }}
-        
     </div>
 </div>

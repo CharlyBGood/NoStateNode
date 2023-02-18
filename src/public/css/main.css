@@ -37,7 +37,7 @@ body {
   top: 0;
 }
 
-.nav-container a,
+/* .nav-container a,
 h1 {
   font-size: 1.2em;
   color: var(--wheat);
@@ -45,7 +45,8 @@ h1 {
   text-decoration: none;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 2px #363636;
-}
+} */
+
 .main-welcome {
   display: flex;
 }

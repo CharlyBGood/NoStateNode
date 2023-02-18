@@ -24,3 +24,29 @@ const hashPassword = async (password) => {
   const hashedPwrd = await bcrypt.hash(password, salt);
   return hashedPwrd;
 };
+
+// //////////////////////////////////
+
+export const verifyUser = async (req, res) => {
+  const { username, password } = req.body;
+
+  // search user on db
+  const user = User.findOne({ username });
+
+  // if user doesn't exists, show err msg
+  if (!user) {
+    res.render("login", { error: "User doesn't exists!" });
+    return;
+  }
+
+  const validPassword = await bcrypt.compare(password, user.password);
+
+  // if password is incorrect
+  if (!validPassword) {
+    res.render("login", { error: "Password incorrect!" });
+    return;
+  }
+
+  // If everithing is fine, show dashboard
+  res.redirect("/tableComplete");
+};
