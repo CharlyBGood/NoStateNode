@@ -34,6 +34,7 @@ body {
   width: 100%;
   position: fixed;
   background-color: var(--soft-black);
+  top: 0;
 }
 
 .nav-container a,
@@ -49,19 +50,21 @@ h1 {
   display: flex;
 }
 
-.container {
+.content_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  width: 80%;
+  width: 86%;
   margin: 0.5em auto 3em;
+  /* position: absolute; */
   font-size: 0.9em;
   gap: 1em;
+  /* top: 12%; */
+  padding: 6em 0;
 }
 
 .main-container {
@@ -166,6 +169,7 @@ button > * {
   -webkit-box-flex: 0.8;
   -ms-flex: 0.8;
   flex: 0.8;
+  padding: 1em;
 }
 
 footer {
