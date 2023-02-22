@@ -13,7 +13,6 @@ export const createUser = async (req, res) => {
   });
 
   const userCreated = await user.save();
-  console.log(userCreated);
   res.redirect("/tableComplete");
 };
 
@@ -31,7 +30,7 @@ export const verifyUser = async (req, res) => {
   const { username, password } = req.body;
 
   // search user on db
-  const user = User.findOne({ username });
+  const user = await User.findOne({ username });
 
   // if user doesn't exists, show err msg
   if (!user) {

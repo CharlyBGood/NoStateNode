@@ -47,6 +47,12 @@ h1 {
   text-shadow: 2px 2px 2px #363636;
 } */
 
+.body_container {
+  display: flex;
+  flex-direction: column;
+  padding: 6em 0;
+}
+
 .main-welcome {
   display: flex;
 }
@@ -65,7 +71,8 @@ h1 {
   font-size: 0.9em;
   gap: 1em;
   /* top: 12%; */
-  padding: 6em 0;
+  /* padding: 6em 0; */
+  padding-bottom: 4em;
 }
 
 .main-container {
@@ -194,8 +201,8 @@ footer p {
   padding: 0.5em;
 }
 
-@media screen and (max-width: 750px) {
-  .container {
+@media screen and (max-width: 800px) {
+  .content_container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

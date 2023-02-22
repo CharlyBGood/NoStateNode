@@ -8,6 +8,7 @@ export const renderTasks = async (req, res) => {
 
 export const createTask = async (req, res) => {
   const task = Task(req.body);
+  req.flash('success_msg', 'Content created successfully!!');
   await task.save();
   res.redirect("/tableComplete");
 };
@@ -21,8 +22,8 @@ export const editTask = async (req, res) => {
   const { id } = req.params;
 
   await Task.findByIdAndUpdate(id, req.body);
-
-  res.redirect("/");
+  req.flash('success_msg', 'Content updated successfully');
+  res.redirect("/tableComplete");
 };
 
 export const deleteTask = async (req, res, e) => {

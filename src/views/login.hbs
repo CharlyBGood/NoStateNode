@@ -6,37 +6,25 @@
     action="/users/login"
     method="POST"
   >
-    <div class="mb-4">
-      <label class="block text-orange-300 text-sm font-fold mb-2" for="email">
-        Email
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="email"
-        name="email"
-        placeholder="youremail@example.com"
-      />
-    </div>
-    <div class="mb-4">
-      <label
-        class="block text-orange-300 text-sm font-fold mb-2"
-        for="password"
-      >
-        Password
-      </label>
-      <input
-        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="password"
-        name="password"
-        id="password"
-        placeholder="******"
-      />
-    </div>
-
+    <label for="username">Username</label>
+    <input
+      class="form-title"
+      type="text"
+      name="username"
+      placeholder="username"
+    />
+    <label for="password">Password</label>
+    <input
+      class="form-content"
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+    />
     <button
-      class="bg-orange-600 hover:bg-orange-400 w-100 border-none text-black font-bold block border rounded mb-2 py-2 px-4 w-full"
+      class="bg-orange-600 py-1 outline-none hover:bg-orange-400 border-none px-3 text-black font-bold border rounded"
     >
-      <input type="submit" value="Iniciar sesión" />
+      <input type="submit" value="Login" />
     </button>
     <div class="mb-4 text-center py-2">
       <a
