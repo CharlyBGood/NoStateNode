@@ -3,14 +3,14 @@ import Task from "../models/Task";
 export const renderTasks = async (req, res) => {
   const task = await Task.find().lean();
 
-  res.render("tableComplete", { tasks: task });
+  res.render("content", { tasks: task });
 };
 
 export const createTask = async (req, res) => {
   const task = Task(req.body);
   req.flash('success_msg', 'Content created successfully!!');
   await task.save();
-  res.redirect("/tableComplete");
+  res.redirect("/content");
 };
 
 export const renderTaskEdit = async (req, res) => {
@@ -23,15 +23,15 @@ export const editTask = async (req, res) => {
 
   await Task.findByIdAndUpdate(id, req.body);
   req.flash('success_msg', 'Content updated successfully');
-  res.redirect("/tableComplete");
+  res.redirect("/content");
 };
 
 export const deleteTask = async (req, res, e) => {
   const { id } = req.params;
 
   await Task.findByIdAndDelete(id);
-
-  res.redirect("/tableComplete");
+  req.flash('success_msg', 'Content deleted successfully');
+  res.redirect("/content");
 };
 
 // export const taskToggleDone = async (req, res) => {

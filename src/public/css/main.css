@@ -37,15 +37,14 @@ body {
   top: 0;
 }
 
-/* .nav-container a,
-h1 {
+.nav-container h1 {
   font-size: 1.2em;
   color: var(--wheat);
   padding: 0.3em;
   text-decoration: none;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 2px #363636;
-} */
+}
 
 .body_container {
   display: flex;

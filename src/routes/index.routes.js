@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
   res.render("welcome")
 })
 
-router.get("/tableComplete", renderTasks);
+router.get("/content", renderTasks);
 
 router.post("/tasks/add", createTask);
 
