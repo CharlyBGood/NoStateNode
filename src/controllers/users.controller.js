@@ -13,7 +13,8 @@ export const createUser = async (req, res) => {
   });
 
   const userCreated = await user.save();
-  res.redirect("/content");
+  console.log(userCreated);
+  res.render("content", userCreated);
 };
 
 // function to encrypt passwrod with bcrypt
@@ -35,8 +36,8 @@ export const verifyUser = async (req, res) => {
   // if user doesn't exists, show err msg
   if (!user) {
     // res.render("login", { error: "User doesn't exists!" });
-    req.flash('error_msg', 'You have to createa user!!');
-    res.render("login")
+    req.flash("error_msg", "You have to createa user!!");
+    res.render("login");
     return;
   }
 
@@ -49,5 +50,5 @@ export const verifyUser = async (req, res) => {
   }
 
   // If everithing is fine, show dashboard
-  res.redirect("/content");
+  res.render("content", { username });
 };

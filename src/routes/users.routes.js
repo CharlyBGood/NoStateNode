@@ -14,6 +14,10 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/content", (req, res) => {
+  res.render("content")
+})
+
 // show registration page for new user
 router.post("/users/create", createUser);
 
