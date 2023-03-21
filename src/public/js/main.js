@@ -1,14 +1,22 @@
 let deleteBtn = document.getElementsByClassName("btn-danger");
 
+let alertMsg = document.getElementById("alert");
+let dismissBtn = document.getElementById("close-alert");
+
+
 for (let del of deleteBtn) {
-    del.addEventListener("click", doSomething)
+  del.addEventListener("click", confirmAction);
 }
 
-function doSomething(e) {
-    let opt = confirm("Are you sure you want to delete entry?");
-    if (opt == false) {
-        e.preventDefault();
-    } 
-    
+function confirmAction(e) {
+  let opt = confirm("Are you sure you want to delete entry?");
+  if (opt == false) {
+    e.preventDefault();
+  }
 }
 
+dismissBtn.addEventListener("click", dismissAlert);
+
+function dismissAlert() {
+  alertMsg.style.display = "none";
+}

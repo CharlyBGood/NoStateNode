@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>NoStateNode</title>
-    
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAKL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAABABEAAAAREAEBEQAAAAABAREBAAAAABABEAEAAAABAAEAAQAAABAAAAAAAAAAAREAAAAAAAAAAAAAAAABAAEAAAAAAAEAEQAAAAAAAQERAAAAAAABEQEAAAAAAAEQAQAAAAAAAQABAAAAAAAAAAAAAAAAD/3QAA/9kAAPjRAAD/RQAA/s0AAP3dAAD7/wAA/H8AAP//AADd/wAA2f8AANH/AADF/wAAzf8AAN3/AAD//wAA" rel="icon" type="image/x-icon" />
     <script src="https://kit.fontawesome.com/a9d601c6bd.js" crossorigin="anonymous"></script>
     <script type="module" src="\js\main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="shortcut icon" href="\icons\favicon.ico">
 </head>
@@ -15,7 +16,10 @@
     
     {{> navbar }}
 
-    {{{ body }}}
+    <div class="body_container h-full">
+        {{> messages }}
+        {{{ body }}}
+    </div>
 
     {{> footer}}
 
